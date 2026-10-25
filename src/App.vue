@@ -1,66 +1,6 @@
 <template>
   <div class="min-h-screen flex flex-col font-sans bg-[#f8fafc] text-slate-800">
-a charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irandra Vendor - Portal Operasional & Pengambilan Pesanan</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Vue 3 CDN -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- MDI Icons Font -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'sans-serif'],
-                    },
-                    colors: {
-                        emerald: {
-                            50: '#ecfdf5',
-                            100: '#d1fae5',
-                            200: '#a7f3d0',
-                            400: '#34d399',
-                            500: '#10b981',
-                            600: '#059669',
-                            700: '#047857',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        [v-cloak] { display: none; }
-        .scrollbar-hide::-webkit-scrollbar { display: none; }
-        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-        
-        /* Modal Backdrop Animasi Halus Sesuai Transacform (scrim rgba(15,23,42,0.72)) */
-        .modal-overlay {
-            background-color: rgba(15, 23, 42, 0.72);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-            transition: opacity 0.25s ease-out;
-        }
-        .modal-dialog-content {
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        @keyframes modalPop {
-            0% { opacity: 0; transform: scale(0.96) translateY(6px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-    </style>
-</head>
-<body class="bg-[#f8fafc] text-slate-800 font-sans antialiased">
-    <div id="app" v-cloak>
-
-        <!-- ============================================================================== -->
+<!-- ============================================================================== -->
         <!-- 1. LOGIN SCREEN -->
         <!-- ============================================================================== -->
         <div v-if="!currentUser" class="min-h-screen bg-[#f8fafc] flex items-center justify-center p-4">
@@ -1660,3 +1600,23 @@ export default {
             }
 };
 </script>
+
+<style scoped>
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.modal-overlay {
+    background-color: rgba(15, 23, 42, 0.72);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    transition: opacity 0.25s ease-out;
+}
+.modal-dialog-content {
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: modalPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes modalPop {
+    0% { opacity: 0; transform: scale(0.96) translateY(6px); }
+    100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+</style>
