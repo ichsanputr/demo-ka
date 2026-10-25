@@ -920,7 +920,6 @@
     </div>
 
     <!-- Application Script -->
-  </div>
 </template>
 
 <script>
