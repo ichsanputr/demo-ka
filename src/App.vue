@@ -1028,8 +1028,6 @@ const STORAGE_KEY_ORDERS = 'irandra_vendor_orders';
             }
         ];
 
-        createApp({
-
 export default {
   name: 'App',
   setup() {
