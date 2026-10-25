@@ -1197,15 +1197,15 @@ export default {
                     }
                 };
 
+                const basePath = (import.meta.env.BASE_URL || '/').replace(/\/+$/, '');
+
                 const navigateTo = (view, filter = 'Semua') => {
                     currentView.value = view;
                     orderFilter.value = filter;
                     currentPage.value = 1;
-                    if (view === 'dashboard') {
-                        window.history.pushState({}, '', '/dashboard');
-                    } else if (view === 'users') {
-                        window.history.pushState({}, '', '/manajemen-pengguna');
-                    }
+                    const subPath = view === 'users' ? '/manajemen-pengguna' : '/dashboard';
+                    const targetUrl = (basePath ? basePath : '') + subPath;
+                    window.history.pushState({}, '', targetUrl);
                 };
 
                 const setOrderFilter = (st) => {
