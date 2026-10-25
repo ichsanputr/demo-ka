@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-ssr
+*.local
+screenshots
+*.png
+test_and_capture_live.cjs
+verify_routes.cjs
+convert_to_vue.cjs
